@@ -1,0 +1,2303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ecommerce Category</title>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<!-- //Custom Theme files -->
+</head>
+
+<body>
+	<!-- top header -->
+	<div class="header">
+		<div class="container">
+			<div class="d-flex align-items-center justify-content-between">
+				<!-- login -->
+				<div class="w3l_login">
+					<a href="#myModal12" data-bs-toggle="modal" data-bs-target="#myModal12"><i
+							class="fas fa-user"></i></a>
+				</div>
+				<!-- logo -->
+				<div class="w3l_logo text-center ml-auto">
+					<h1><a href="index.html">Logo Here<span>Online Grocery Shopping</span></a></h1>
+				</div>
+				<!-- search -->
+				<div class="header-search position-absolute">
+					<div class="search-right mx-lg-2">
+						<a href="#search" class="btn search-btn p-0" title="search">
+							<i class="fas fa-search"></i></a>
+						<!-- search popup -->
+						<div id="search" class="pop-overlay">
+							<div class="popup">
+								<form action="error.html" method="GET" class="search-box">
+									<input type="search" placeholder="Enter Keyword..." name="search"
+										required="required" autofocus="">
+									<button type="submit" class="btn"><span class="fas fa-search"
+											aria-hidden="true"></span></button>
+								</form>
+							</div>
+							<a class="close" href="#close">×</a>
+						</div>
+					</div>
+				</div>
+				<!-- cart -->
+				<div class="cart cart box_1">
+					<form action="#" method="post" class="last">
+						<input type="hidden" name="cmd" value="_cart" />
+						<input type="hidden" name="display" value="1" />
+						<button class="w3view-cart" type="submit" name="submit" value=""><i
+								class="fas fa-shopping-bag"></i></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //top header -->
+
+	<!-- header -->
+	<header id="site-header" class="fixed-top">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+					<span class="navbar-toggler-icon fa icon-close fa-times"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarScroll">
+					<ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Products <i class="fas fa-angle-down"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-2" aria-labelledby="navbarScrollingDropdown">
+								<div class="row">
+									<div class="col-lg-4">
+										<ul class="multi-column-dropdown">
+											<h6>Kitchen</h6>
+											<li><a href="products1.html">Meat & Seafood </a></li>
+											<li><a href="products1.html">Snack Foods<span>New</span></a></li>
+											<li><a href="products1.html">Oils, Vinegars</a></li>
+											<li><a href="products1.html">Pasta & Noodles<span>New</span></a></li>
+										</ul>
+									</div>
+									<div class="col-lg-4 mt-lg-0 mt-4">
+										<ul class="multi-column-dropdown">
+											<h6>Household</h6>
+											<li><a href="products2.html">Detergents</a></li>
+											<li><a href="products2.html">Floor & Other Cleaners</a></li>
+											<li><a href="products2.html">Pet Care <span>New</span></a></li>
+											<li><a href="products2.html"><i>Festive Decoratives</i></a></li>
+										</ul>
+									</div>
+									<div class="col-lg-4">
+										<div class="w3ls_products_pos">
+											<h4 class="mb-4">30%<i>Off/-</i></h4>
+											<img src="images/nav.png" alt=" " class="img-fluid">
+										</div>
+									</div>
+								</div>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">About Us</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Pages <i class="fas fa-angle-down"></i>
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+								<li><a class="dropdown-item" href="blog.html">Blog Posts</a></li>
+								<li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
+								<li><a class="dropdown-item" href="single.html">Single</a></li>
+								<li><a class="dropdown-item" href="faq.html">Faq's</a></li>
+								<li><a class="dropdown-item" href="shortcodes.html">Shortcodes</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+				<!-- toggle switch for light and dark theme -->
+				<div class="cont-ser-position">
+					<nav class="navigation-dark">
+						<div class="theme-switch-wrapper">
+							<label class="theme-switch" for="checkbox">
+								<input type="checkbox" id="checkbox">
+								<div class="mode-container">
+									<i class="gg-sun"></i>
+									<i class="gg-moon"></i>
+								</div>
+							</label>
+						</div>
+					</nav>
+				</div>
+				<!-- //toggle switch for light and dark theme -->
+			</nav>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- banner section -->
+	<section id="home" class="w3l-banner py-5">
+		<div class="banner-content">
+			<div class="container pt-sm-5 pb-md-4">
+				<div class="row align-items-center py-4">
+					<div class="col-md-6">
+						<p class="banner-sub mb-1">Start your daily online shopping!</p>
+						<h3 class="mb-md-5 mb-4 title">Stay home & we will deliver your daily need's
+						</h3>
+						<div class="d-flex align-items-center buttons-banner mt-sm-5 mt-4">
+							<a href="#" class="btn btn-style">Shop Now</a>
+						</div>
+					</div>
+					<div class="col-md-6 right-banner-2 position-relative p-md-0 mt-sm-0 mt-4">
+						<div class="sub-banner-image mx-auto">
+							<img src="images/banner-img.png" class="img-fluid position-relative" alt=" ">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //banner section -->
+	<!-- Ticker-bottom -->
+	<div class="ticker pt-5">
+		<div class="stock-ticker">
+			<ul>
+				<li class="minus"><span class="company">BTC</span> <span class="price">$67.150</span> <span
+						class="change">-0.39% (-0.75% 24h)</span></li>
+				<li class="plus"><span class="company">ETH</span> <span class="price">$2.631</span> <span
+						class="change">+0.29 (-2.68%)</span></li>
+				<li class="plus"><span class="company">USDT</span> <span class="price">$0.999</span> <span
+						class="change">+0.01 (+0.03%)</span></li>
+				<li class="plus"><span class="company">BNB</span> <span class="price">$592.05</span> <span
+						class="change">+0.42 (+2.54%)</span></li>
+				<li class="minus"><span class="company">SOL</span> <span class="price">$166.47</span> <span
+						class="change">-0.89 (-0.28%)</span></li>
+				<li class="plus"><span class="company">USDC</span> <span class="price">$487.05</span> <span
+						class="change">+5.31 (+1.10%)</span></li>
+				<li class="minus"><span class="company">XRP</span> <span class="price">$0.535</span> <span
+						class="change">-3.82 (-1.63%)</span></li>
+				<li class="minus"><span class="company">DOGE</span> <span class="price">$0.143</span> <span
+						class="change">-0.33 (-0.95%)</span></li>
+			</ul>
+			<ul aria-hidden="true">
+				<li class="minus"><span class="company">BTC</span> <span class="price">$67.150</span> <span
+						class="change">-0.39% (-0.75% 24h)</span></li>
+				<li class="plus"><span class="company">ETH</span> <span class="price">$2.631</span> <span
+						class="change">+0.29 (-2.68%)</span></li>
+				<li class="plus"><span class="company">USDT</span> <span class="price">$0.999</span> <span
+						class="change">+0.01 (+0.03%)</span></li>
+				<li class="plus"><span class="company">BNB</span> <span class="price">$592.05</span> <span
+						class="change">+0.42 (+2.54%)</span></li>
+				<li class="minus"><span class="company">SOL</span> <span class="price">$166.47</span> <span
+						class="change">-0.89 (-0.28%)</span></li>
+				<li class="plus"><span class="company">USDC</span> <span class="price">$487.05</span> <span
+						class="change">+5.31 (+1.10%)</span></li>
+				<li class="minus"><span class="company">XRP</span> <span class="price">$0.535</span> <span
+						class="change">-3.82 (-1.63%)</span></li>
+				<li class="minus"><span class="company">DOGE</span> <span class="price">$0.143</span> <span
+						class="change">-0.33 (-0.95%)</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //banner section -->
+	<!-- banner-bottom -->
+	<section class="banner-bottom py-5">
+		<div class="container py-lg-5 py-4">
+			<div class="row align-items-center">
+				<div class="col-lg-5 wthree_banner_bottom_left">
+					<div class="position-relative">
+						<img src="images/image1.jpg" alt="" class="img-fluid radius-image">
+						<a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
+							<span class="video-play-icon">
+								<span class="fa fa-play"></span>
+							</span>
+						</a>
+						<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+						<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+							<iframe src="https://player.vimeo.com/video/106183791?h=b24e6f79f8"
+								allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7 wthree_banner_bottom_right">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="vegetables-tab" data-bs-toggle="tab"
+								data-bs-target="#vegetables" type="button" role="tab" aria-controls="vegetables"
+								aria-selected="true">Vegetables</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="meats-tab" data-bs-toggle="tab" data-bs-target="#meats"
+								type="button" role="tab" aria-controls="meats" aria-selected="false">Meats &
+								Seafood</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="bakeryt-tab" data-bs-toggle="tab" data-bs-target="#bakery"
+								type="button" role="tab" aria-controls="bakery" aria-selected="false">Bakery</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="beverages-tab" data-bs-toggle="tab" data-bs-target="#beverages"
+								type="button" role="tab" aria-controls="beverages"
+								aria-selected="false">Beverages</button>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="vegetables" role="tabpanel"
+							aria-labelledby="vegetables-tab">
+							<div class="row agile_ecommerce_tabs">
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/a1.png" alt=" " class="img-fluid" />
+										<img src="images/a1.png" alt=" " class="img-fluid" />
+										<img src="images/a1.png" alt=" " class="img-fluid" />
+										<img src="images/a1.png" alt=" " class="img-fluid" />
+										<img src="images/a1.png" alt=" " class="img-fluid" />
+										<img src="images/a1.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#modal" data-bs-toggle="modal" data-bs-target="#myModal"><i
+															class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Ladies Finger 500g</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$380</span> <i class="item_price">$350</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Ladies Finger 500g" />
+											<input type="hidden" name="amount" value="350.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/a2.png" alt=" " class="img-fluid" />
+										<img src="images/a2.png" alt=" " class="img-fluid" />
+										<img src="images/a2.png" alt=" " class="img-fluid" />
+										<img src="images/a2.png" alt=" " class="img-fluid" />
+										<img src="images/a2.png" alt=" " class="img-fluid" />
+										<img src="images/a2.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal1" data-bs-toggle="modal"
+														data-bs-target="#myModal1"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Brinjal long 500g</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$330</span> <i class="item_price">$302</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Brinjal long 500g" />
+											<input type="hidden" name="amount" value="302.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/a3.png" alt=" " class="img-fluid" />
+										<img src="images/a3.png" alt=" " class="img-fluid" />
+										<img src="images/a3.png" alt=" " class="img-fluid" />
+										<img src="images/a3.png" alt=" " class="img-fluid" />
+										<img src="images/a3.png" alt=" " class="img-fluid" />
+										<img src="images/a3.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal2" data-bs-toggle="modal"
+														data-bs-target="#myModal2"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Palak 250g</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$250</span> <i class="item_price">$245</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Palak 250g" />
+											<input type="hidden" name="amount" value="245.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="meats" role="tabpanel" aria-labelledby="meats-tab">
+							<div class="row agile_ecommerce_tabs">
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/b1.png" alt=" " class="img-fluid" />
+										<img src="images/b1.png" alt=" " class="img-fluid" />
+										<img src="images/b1.png" alt=" " class="img-fluid" />
+										<img src="images/b1.png" alt=" " class="img-fluid" />
+										<img src="images/b1.png" alt=" " class="img-fluid" />
+										<img src="images/b1.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal3" data-bs-toggle="modal"
+														data-bs-target="#myModal3"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Prawns (Big)</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$320</span> <i class="item_price">$250</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Prawns (Big)" />
+											<input type="hidden" name="amount" value="250.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/b2.png" alt=" " class="img-fluid" />
+										<img src="images/b2.png" alt=" " class="img-fluid" />
+										<img src="images/b2.png" alt=" " class="img-fluid" />
+										<img src="images/b2.png" alt=" " class="img-fluid" />
+										<img src="images/b2.png" alt=" " class="img-fluid" />
+										<img src="images/b1.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal4" data-bs-toggle="modal"
+														data-bs-target="#myModal4"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Silver Belly Fish</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$180</span> <i class="item_price">$150</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Silver Belly Fish" />
+											<input type="hidden" name="amount" value="150.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/b3.png" alt=" " class="img-fluid" />
+										<img src="images/b3.png" alt=" " class="img-fluid" />
+										<img src="images/b3.png" alt=" " class="img-fluid" />
+										<img src="images/b3.png" alt=" " class="img-fluid" />
+										<img src="images/b3.png" alt=" " class="img-fluid" />
+										<img src="images/b3.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal5" data-bs-toggle="modal"
+														data-bs-target="#myModal5"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Prawns Meat (Small)</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$220</span> <i class="item_price">$180</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Prawns Meat" />
+											<input type="hidden" name="amount" value="180.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="bakery" role="tabpanel" aria-labelledby="bakery-tab">
+							<div class="row agile_ecommerce_tabs">
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/c1.png" alt=" " class="img-fluid" />
+										<img src="images/c1.png" alt=" " class="img-fluid" />
+										<img src="images/c1.png" alt=" " class="img-fluid" />
+										<img src="images/c1.png" alt=" " class="img-fluid" />
+										<img src="images/c1.png" alt=" " class="img-fluid" />
+										<img src="images/c1.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal6" data-bs-toggle="modal"
+														data-bs-target="#myModal6"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Pista Soan Papdi</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$880</span> <i class="item_price">$850</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Pista Soan Papdi" />
+											<input type="hidden" name="amount" value="850.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/c2.png" alt=" " class="img-fluid" />
+										<img src="images/c2.png" alt=" " class="img-fluid" />
+										<img src="images/c2.png" alt=" " class="img-fluid" />
+										<img src="images/c2.png" alt=" " class="img-fluid" />
+										<img src="images/c2.png" alt=" " class="img-fluid" />
+										<img src="images/c2.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal7" data-bs-toggle="modal"
+														data-bs-target="#myModal7"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">KARACHI Halwa Box</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$290</span> <i class="item_price">$280</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="KARACHI Halwa Box" />
+											<input type="hidden" name="amount" value="280.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/c3.png" alt=" " class="img-fluid" />
+										<img src="images/c3.png" alt=" " class="img-fluid" />
+										<img src="images/c3.png" alt=" " class="img-fluid" />
+										<img src="images/c3.png" alt=" " class="img-fluid" />
+										<img src="images/c3.png" alt=" " class="img-fluid" />
+										<img src="images/c3.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal8" data-bs-toggle="modal"
+														data-bs-target="#myModal8"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">KARACHI Fruit Cookies</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$120</span> <i class="item_price">$80</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Fruit Cookies" />
+											<input type="hidden" name="amount" value="80.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="beverages" role="tabpanel" aria-labelledby="beverages-tab">
+							<div class="row agile_ecommerce_tabs">
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/d1.png" alt=" " class="img-fluid" />
+										<img src="images/d1.png" alt=" " class="img-fluid" />
+										<img src="images/d1.png" alt=" " class="img-fluid" />
+										<img src="images/d1.png" alt=" " class="img-fluid" />
+										<img src="images/d1.png" alt=" " class="img-fluid" />
+										<img src="images/d1.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal9" data-bs-toggle="modal"
+														data-bs-target="#myModal9"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Thums Up Soft drink</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$950</span> <i class="item_price">$90</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Thums Up" />
+											<input type="hidden" name="amount" value="820.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/d2.png" alt=" " class="img-fluid" />
+										<img src="images/d2.png" alt=" " class="img-fluid" />
+										<img src="images/d2.png" alt=" " class="img-fluid" />
+										<img src="images/d2.png" alt=" " class="img-fluid" />
+										<img src="images/d2.png" alt=" " class="img-fluid" />
+										<img src="images/d2.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal10" data-bs-toggle="modal"
+														data-bs-target="#myModal10"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Coca-Cola Can</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$700</span> <i class="item_price">$80</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Coca-Cola Can" />
+											<input type="hidden" name="amount" value="680.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-4 agile_ecommerce_tab_left">
+									<div class="hs-wrapper">
+										<img src="images/d3.png" alt=" " class="img-fluid" />
+										<img src="images/d3.png" alt=" " class="img-fluid" />
+										<img src="images/d3.png" alt=" " class="img-fluid" />
+										<img src="images/d3.png" alt=" " class="img-fluid" />
+										<img src="images/d3.png" alt=" " class="img-fluid" />
+										<img src="images/d3.png" alt=" " class="img-fluid" />
+										<div class="w3_hs_bottom">
+											<ul>
+												<li>
+													<a href="#myModal11" data-bs-toggle="modal"
+														data-bs-target="#myModal11"><i class="fas fa-eye"></i></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<h5><a href="single.html">Fanta PET Bottle</a></h5>
+									<div class="simpleCart_shelfItem">
+										<p><span>$520</span> <i class="item_price">$50</i></p>
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart" />
+											<input type="hidden" name="add" value="1" />
+											<input type="hidden" name="w3ls_item" value="Fanta PET Bottle" />
+											<input type="hidden" name="amount" value="510.00" />
+											<button type="submit" class="w3ls-cart">Add to cart</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //banner-bottom -->
+
+	<!-- banner-bottom1 -->
+	<section class="banner-bottom1">
+		<div class="row agileinfo_banner_bottom1_grids m-0">
+			<div class="col-md-7 agileinfo_banner_bottom1_grid_left">
+				<h3>Free Delivery<span>20% <i>Cashback</i></span></h3>
+				<a class="btn btn-style" href="#">Shop Now</a>
+			</div>
+			<div class="col-md-5 agileinfo_banner_bottom1_grid_right d-flex align-items-center">
+				<h4>Organic Foods</h4>
+			</div>
+		</div>
+	</section>
+	<!-- //banner-bottom1 -->
+
+	<!-- special-deals -->
+	<section class="special-deals py-5">
+		<div class="container py-md-5 py-4">
+			<h2>Special Deals</h2>
+			<div class="row w3agile_special_deals_grids">
+				<div class="col-md-7 w3agile_special_deals_grid_left">
+					<div class="w3agile_special_deals_grid_left_grid">
+						<img src="images/bgs3.jpg" alt=" " class="img-fluid" />
+						<div class="w3agile_special_deals_grid_left_grid_pos1">
+							<h5>30%<span>Off/-</span></h5>
+						</div>
+						<div class="w3agile_special_deals_grid_left_grid_pos">
+							<h4>We Offer <span>Best Products</span></h4>
+						</div>
+					</div>
+					<div class="w3agile_special_deals_grid_left_grid">
+						<img src="images/bgs5.jpg" alt=" " class="img-fluid" />
+						<div class="w3agile_special_deals_grid_left_grid_pos">
+							<h4>Best Store
+								<span>For GROCERIES</span></h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 w3agile_special_deals_grid_right">
+					<img src="images/bgs4.jpg" alt=" " class="img-fluid" />
+					<div class="w3agile_special_deals_grid_right_pos text-end">
+						<h4>Big <span>Deals</span></h4>
+						<h5>save up <span>to</span> 30%</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //special-deals -->
+
+	<!-- top-products -->
+	<section class="new-products py-5">
+		<div class="container py-md-5 py-4">
+			<h3>Top Products</h3>
+			<div class="row agileinfo_new_products_grids">
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="images/e1.png" alt=" " class="img-fluid" />
+							<img src="images/ee1.png" alt=" " class="img-fluid" />
+							<img src="images/e1.png" alt=" " class="img-fluid" />
+							<img src="images/ee1.png" alt=" " class="img-fluid" />
+							<img src="images/e1.png" alt=" " class="img-fluid" />
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#myModal13" data-bs-toggle="modal" data-bs-target="#myModal13"><i
+												class="fas fa-eye"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="single.html">ProV Pistachios</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$520</span> <i class="item_price">$500</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="ProV Pistachios">
+								<input type="hidden" name="amount" value="500.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="images/e2.png" alt=" " class="img-fluid" />
+							<img src="images/ee2.png" alt=" " class="img-fluid" />
+							<img src="images/e2.png" alt=" " class="img-fluid" />
+							<img src="images/ee2.png" alt=" " class="img-fluid" />
+							<img src="images/e2.png" alt=" " class="img-fluid" />
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#myModal14" data-bs-toggle="modal" data-bs-target="#myModal14"><i
+												class="fas fa-eye"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="single.html">Himalayan Cashews</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$380</span> <i class="item_price">$370</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Himalayan Cashews">
+								<input type="hidden" name="amount" value="370.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="images/e3.png" alt=" " class="img-fluid" />
+							<img src="images/ee3.png" alt=" " class="img-fluid" />
+							<img src="images/e3.png" alt=" " class="img-fluid" />
+							<img src="images/ee3.png" alt=" " class="img-fluid" />
+							<img src="images/e3.png" alt=" " class="img-fluid" />
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#myModal15" data-bs-toggle="modal" data-bs-target="#myModal15"><i
+												class="fas fa-eye"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="single.html">Kernels Walnuts</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$150</span> <i class="item_price">$100</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Kernels Walnuts">
+								<input type="hidden" name="amount" value="100.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="images/e4.png" alt=" " class="img-fluid" />
+							<img src="images/ee4.png" alt=" " class="img-fluid" />
+							<img src="images/e4.png" alt=" " class="img-fluid" />
+							<img src="images/ee4.png" alt=" " class="img-fluid" />
+							<img src="images/e4.png" alt=" " class="img-fluid" />
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#myModal16" data-bs-toggle="modal" data-bs-target="#myModal16"><i
+												class="fas fa-eye"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="single.html">Himalayan Almonds</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$280</span> <i class="item_price">$250</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Himalayan Almonds">
+								<input type="hidden" name="amount" value="250.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row agileinfo_new_products_grids mt-5">
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="images/f1.png" alt=" " class="img-fluid" />
+							<img src="images/f11.png" alt=" " class="img-fluid" />
+							<img src="images/f1.png" alt=" " class="img-fluid" />
+							<img src="images/f11.png" alt=" " class="img-fluid" />
+							<img src="images/f1.png" alt=" " class="img-fluid" />
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#myModal29" data-bs-toggle="modal" data-bs-target="#myModal29"><i
+												class="fas fa-eye"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="single.html">Yellow Arhar Dal</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$40</span> <i class="item_price">$30</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Yellow Arhar Dal">
+								<input type="hidden" name="amount" value="30.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="images/f2.png" alt=" " class="img-fluid" />
+							<img src="images/f22.png" alt=" " class="img-fluid" />
+							<img src="images/f2.png" alt=" " class="img-fluid" />
+							<img src="images/f22.png" alt=" " class="img-fluid" />
+							<img src="images/f2.png" alt=" " class="img-fluid" />
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#myModal30" data-bs-toggle="modal" data-bs-target="#myModal30"><i
+												class="fas fa-eye"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="single.html">Tata Sampann Poha</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$280</span> <i class="item_price">$170</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Tata Sampann Poha">
+								<input type="hidden" name="amount" value="170.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="images/f3.png" alt=" " class="img-fluid" />
+							<img src="images/f33.png" alt=" " class="img-fluid" />
+							<img src="images/f3.png" alt=" " class="img-fluid" />
+							<img src="images/f33.png" alt=" " class="img-fluid" />
+							<img src="images/f3.png" alt=" " class="img-fluid" />
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#myModal31" data-bs-toggle="modal" data-bs-target="#myModal31"><i
+												class="fas fa-eye"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="single.html">Lay's Onion Chips</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$20</span> <i class="item_price">$10</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Lay's Onion Chips">
+								<input type="hidden" name="amount" value="10.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="images/f4.png" alt=" " class="img-fluid" />
+							<img src="images/f44.png" alt=" " class="img-fluid" />
+							<img src="images/f4.png" alt=" " class="img-fluid" />
+							<img src="images/f44.png" alt=" " class="img-fluid" />
+							<img src="images/f4.png" alt=" " class="img-fluid" />
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#myModal32" data-bs-toggle="modal" data-bs-target="#myModal32"><i
+												class="fas fa-eye"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="single.html">Cadbury Dairy Milk</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$300</span> <i class="item_price">$200</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Cadbury Dairy Milk">
+								<input type="hidden" name="amount" value="200.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- top-brands -->
+	<section class="top-brands w3l-partners py-5" id="partners">
+		<div class="container py-4">
+			<h3>Top Brands</h3>
+			<div class="row align-items-center">
+				<div class="owl-three owl-carousel owl-theme logo-view">
+					<div class="item">
+						<img src="images/tb1.png" alt="company-logo" class="img-fluid">
+					</div>
+					<div class="item">
+						<img src="images/tb2.png" alt="company-logo" class="img-fluid">
+					</div>
+					<div class="item">
+						<img src="images/tb3.png" alt="company-logo" class="img-fluid">
+					</div>
+					<div class="item">
+						<img src="images/tb4.png" alt="company-logo" class="img-fluid">
+					</div>
+					<div class="item">
+						<img src="images/tb5.png" alt="company-logo" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //top-brands -->
+	 <!--Testimonial --> 
+		<section class="tester_new text-center">
+			<h2 class="mt-5">What other say for us</h2>
+			<hr>
+			<h5 class="mb-5">Our team created best opportunities for your business.</h5>
+			<div class="container">
+			  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+				  <div class="carousel-item active">
+					<div class="row">
+					  <div class="col-lg-2"></div>
+					  <div class="col-lg-8">
+						<p>"The teaching, in my opinion, is the best that anyone can hope for. Sekolah High School staff provide an environment in which students are able to reach their full potential. As well as this. I felt constantly challenged to push myself to exceed what is expected. I have no doubt that the persion I become is due to my time spent here and that the last six years have been the best of my life."</p>
+						<hr>
+						<h5>Cynthia Nelson</h5>
+						<p>Student of scince</p>
+					  </div>
+					  <div class="col-lg-2"></div>
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="row">
+					  <div class="col-lg-2"></div>
+					  <div class="col-lg-8">
+						<p>"The teaching, in my opinion, is the best that anyone can hope for. Sekolah High School staff provide an environment in which students are able to reach their full potential. As well as this. I felt constantly challenged to push myself to exceed what is expected. I have no doubt that the persion I become is due to my time spent here and that the last six years have been the best of my life."</p>
+						<hr>
+						<h5>Cynthia Nelson</h5>
+						<p>Student of scince</p>
+					  </div>
+					  <div class="col-lg-2"></div>
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<div class="row">
+					  <div class="col-lg-2"></div>
+					  <div class="col-lg-8">
+						<p>"The teaching, in my opinion, is the best that anyone can hope for. Sekolah High School staff provide an environment in which students are able to reach their full potential. As well as this. I felt constantly challenged to push myself to exceed what is expected. I have no doubt that the persion I become is due to my time spent here and that the last six years have been the best of my life."</p>
+						<hr>
+						<h5>Cynthia Nelson</h5>
+						<p>Student of scince</p>
+					  </div>
+					  <div class="col-lg-2"></div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </section>  
+	<!-- newsletter -->
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 w3agile_newsletter_left">
+					<h3>Newsletter</h3>
+					<p>Excepteur sint occaecat cupidatat non proident, sunt.</p>
+				</div>
+				<div class="col-md-6 w3agile_newsletter_right">
+					<form action="#" method="post">
+						<input type="email" name="Email" placeholder="Email" required="">
+						<button class="btn btn-style"><span class="fas fa-paper-plane"></span></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //newsletter -->
+
+	<!-- footer -->
+	<div class="footer pt-5">
+		<div class="container py-4">
+			<div class="row w3_footer_grids">
+				<div class="col-md-3 w3_footer_grid">
+					<h3>Contact</h3>
+					<ul class="address">
+						<li><i class="fas fa-map-marker-alt"></i>London, 235 Terry, 10001</li>
+						<li><i class="fas fa-envelope-open-text"></i><a
+								href="/cdn-cgi/l/email-protection#6c05020a032c09140d011c0009420f0301"><span
+									class="__cf_email__"
+									data-cfemail="c1a8afa7ae81a4b9a0acb1ada4efa2aeac">[email&#160;protected]</span></a>
+						</li>
+						<li> <a href="tel:+44-000-888-999"><i class="fas fa-phone-alt"></i>++44-000-888-999</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3_footer_grid">
+					<h3>Information</h3>
+					<ul class="info">
+						<li><a href="about.html"><i class="fas fa-angle-right"></i>About Us</a></li>
+						<li><a href="mail.html"><i class="fas fa-angle-right"></i>Contact Us</a></li>
+						<li><a href="codes.html"><i class="fas fa-angle-right"></i>Shortcodes</a></li>
+						<li><a href="faq.html"><i class="fas fa-angle-right"></i>FAQ's</a></li>
+						<li><a href="products1.html"><i class="fas fa-angle-right"></i>Special Products</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3_footer_grid">
+					<h3>Category</h3>
+					<ul class="info">
+						<li><a href="products1.html"><i class="fas fa-angle-right"></i>Fruits & Vegetables</a></li>
+						<li><a href="products2.html"><i class="fas fa-angle-right"></i>Meats & Seafood</a></li>
+						<li><a href="products1.html"><i class="fas fa-angle-right"></i>Bakery & Pastry</a></li>
+						<li><a href="products2.html"><i class="fas fa-angle-right"></i>Beverages</a></li>
+						<li><a href="products1.html"><i class="fas fa-angle-right"></i>Breakfast & Dairy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3_footer_grid">
+					<h3>Profile</h3>
+					<ul class="info">
+						<li><a href="index.html"><i class="fas fa-angle-right"></i>Home</a></li>
+						<li><a href="products2.html"><i class="fas fa-angle-right"></i>Today's Deals</a></li>
+					</ul>
+					<h4>Follow Us</h4>
+					<div class="agileits_social_button">
+						<ul>
+							<li><a href="#facebook" class="facebook"><i class="fab fa-facebook-f"></i> </a></li>
+							<li><a href="#twitter" class="twitter"><i class="fab fa-twitter"></i> </a></li>
+							<li><a href="#google" class="google"><i class="fab fa-google-plus-g"></i> </a></li>
+							<li><a href="#pinterest" class="pinterest"><i class="fab fa-pinterest-p"></i> </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copy mt-4">
+			<div class="container">
+				<p class="copy-text">&copy; 2025 All rights reserved. Design by
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<!-- Js scripts -->
+	<!-- move top -->
+	<button onclick="topFunction()" id="movetop" title="Go to top">
+		<span class="fas fa-level-up-alt" aria-hidden="true"></span>
+	</button>
+	<!-- header modal -->
+	<div class="modal fade" id="myModal12" tabindex="-1" aria-labelledby="myModal12" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+								type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+								type="button" role="tab" aria-controls="profile" aria-selected="false">Register</button>
+						</li>
+					</ul>
+					<div class="tab-content p-0" id="myTabContent">
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<div class="register">
+								<form action="#" method="post">
+									<input name="Email" placeholder="Email Address" type="text" required="">
+									<input name="Password" placeholder="Password" type="password" required="">
+									<div class="sign-up">
+										<input type="submit" value="Sign in">
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<div class="register">
+								<form action="#" method="post">
+									<input placeholder="Name" name="Name" type="text" required="">
+									<input placeholder="Email Address" name="Email" type="email" required="">
+									<input placeholder="Password" name="Password" type="password" required="">
+									<input placeholder="Confirm Password" name="Password" type="password" required="">
+									<div class="sign-up">
+										<input type="submit" value="Create Account">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header modal -->
+	<!-- modal-video -->
+	<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/a1.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Ladies Finger 500g</h4>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+							dolore eu fugiat nulla pariatur. </p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$380</span> <i class="item_price">$350</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Ladies Finger">
+								<input type="hidden" name="amount" value="350.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="myModal1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/a2.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Brinjal long 500g</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$330</span> <i class="item_price">$302</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Brinjal long">
+								<input type="hidden" name="amount" value="302.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="myModal2" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/a3.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Palak 250g</h4>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+							ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Excepteur
+							sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$250</span> <i class="item_price">$245</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Palak 250g">
+								<input type="hidden" name="amount" value="245.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal3" tabindex="-1" aria-labelledby="myModal3" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/b1.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Prawns (Big)</h4>
+						<p>Duis aute irure dolor inreprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+							in culpa
+							qui officia deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$320</span> <i class="item_price">$250</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Prawns (Big)">
+								<input type="hidden" name="amount" value="250.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal4" tabindex="-1" aria-labelledby="myModal4" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/b2.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Silver Belly Fish</h4>
+						<p>Excepteur sint occaecat laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit
+							esse cillum
+							dolore
+							eu fugiat nulla pariatur cupidatat non proident, sunt in culpa qui officia
+							deserunt
+							mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$180</span> <i class="item_price">$150</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Silver Belly Fish">
+								<input type="hidden" name="amount" value="150.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal5" tabindex="-1" aria-labelledby="myModal5" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/b3.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Prawns Meat (Small)</h4>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+							aliquip ex ea
+							commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit
+							esse cillum
+							dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+							est laborum.
+						</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$220</span> <i class="item_price">$180</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Prawns Meat">
+								<input type="hidden" name="amount" value="180.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal6" tabindex="-1" aria-labelledby="myModal6" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/c1.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Pista Soan Papdi</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$880</span> <i class="item_price">$850</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Pista Soan Papdi">
+								<input type="hidden" name="amount" value="850.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal7" tabindex="-1" aria-labelledby="myModal7" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/c2.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>KARACHI Halwa Box</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$290</span> <i class="item_price">$280</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="KARACHI Halwa Box">
+								<input type="hidden" name="amount" value="280.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal8" tabindex="-1" aria-labelledby="myModal8" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/c3.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>KARACHI Fruit Cookies</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$120</span> <i class="item_price">$80</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Fruit Cookies">
+								<input type="hidden" name="amount" value="80.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal9" tabindex="-1" aria-labelledby="myModal9" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/d1.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Thums Up Soft drink</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$950</span> <i class="item_price">$90</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Thums Upk">
+								<input type="hidden" name="amount" value="90.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal10" tabindex="-1" aria-labelledby="myModal10" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/d2.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Coca-Cola Can</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$700</span> <i class="item_price">$80</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Coca-Cola Can">
+								<input type="hidden" name="amount" value="80.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal11" tabindex="-1" aria-labelledby="myModal11" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/d3.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Fanta PET Bottle</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$520</span> <i class="item_price">$50</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Fanta PET Bottle">
+								<input type="hidden" name="amount" value="50.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Top Products modals -->
+	<div class="modal fade" id="myModal13" tabindex="-1" aria-labelledby="myModal13" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/e1.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>ProV Pistachios</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$520</span> <i class="item_price">$500</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="ProV Pistachios">
+								<input type="hidden" name="amount" value="500.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal14" tabindex="-1" aria-labelledby="myModal14" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/e2.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Himalayan Cashews</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$380</span> <i class="item_price">$370</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Himalayan Cashews">
+								<input type="hidden" name="amount" value="370.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal15" tabindex="-1" aria-labelledby="myModal15" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/e3.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Kernels Walnuts</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$150</span> <i class="item_price">$100</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Kernels Walnuts">
+								<input type="hidden" name="amount" value="100.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal16" tabindex="-1" aria-labelledby="myModal16" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/e4.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Himalayan Almonds</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$280</span> <i class="item_price">$250</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Himalayan Almonds">
+								<input type="hidden" name="amount" value="250.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal29" tabindex="-1" aria-labelledby="myModal29" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/f1.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Yellow Arhar Dal</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$40</span> <i class="item_price">$30</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Yellow Arhar Dal">
+								<input type="hidden" name="amount" value="30.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal30" tabindex="-1" aria-labelledby="myModal30" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/f2.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Tata Sampann Poha</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$280</span> <i class="item_price">$170</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Tata Sampann Poha">
+								<input type="hidden" name="amount" value="170.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal31" tabindex="-1" aria-labelledby="myModal31" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/f3.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Lay's Onion Chips</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$20</span> <i class="item_price">$10</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Lay's Onion Chips">
+								<input type="hidden" name="amount" value="10.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal32" tabindex="-1" aria-labelledby="myModal32" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="row modal-body">
+					<div class="col-md-5 modal_body_left">
+						<img src="images/f4.png" alt=" " class="img-fluid" />
+					</div>
+					<div class="col-md-7 modal_body_right">
+						<h4>Cadbury Dairy Milk</h4>
+						<p>Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat.Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia
+							deserunt mollit anim id est laborum.</p>
+						<div class="rating">
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star-.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="rating-left">
+								<img src="images/star.png" alt=" " class="img-fluid" />
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="modal_body_right_cart simpleCart_shelfItem">
+							<p><span>$300</span> <i class="item_price">$200</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1">
+								<input type="hidden" name="w3ls_item" value="Cadbury Dairy Milk">
+								<input type="hidden" name="amount" value="200.00">
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modals -->
+	<script>
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("movetop").style.display = "block";
+			} else {
+				document.getElementById("movetop").style.display = "none";
+			}
+		}
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+	<!-- //move top -->
+
+	<!-- common jquery plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- //common jquery plugin -->
+
+	<!-- owl carousel -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<!-- owl carousel -->
+	<!-- script for customers -->
+	<script>
+		$(document).ready(function() {
+			$('.owl-three').owlCarousel({
+				loop: true,
+				margin: 0,
+				nav: false,
+				dots: false,
+				responsiveClass: true,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				autoplaySpeed: 1000,
+				autoplayHoverPause: false,
+				responsive: {
+					0: {
+						items: 2,
+						nav: true
+					},
+					414: {
+						items: 3,
+						nav: true
+					},
+					800: {
+						items: 4,
+						nav: true
+					}
+				}
+			})
+		})
+	</script>
+	<!-- //customers owlcarousel -->
+
+	<!-- MENU-JS -->
+	<script>
+		$(window).on("scroll", function() {
+			var scroll = $(window).scrollTop();
+			if (scroll >= 80) {
+				$("#site-header").addClass("nav-fixed");
+			} else {
+				$("#site-header").removeClass("nav-fixed");
+			}
+		});
+		//Main navigation Active Class Add Remove
+		$(".navbar-toggler").on("click", function() {
+			$("header").toggleClass("active");
+		});
+		$(document).on("ready", function() {
+			if ($(window).width() > 991) {
+				$("header").removeClass("active");
+			}
+			$(window).on("resize", function() {
+				if ($(window).width() > 991) {
+					$("header").removeClass("active");
+				}
+			});
+		});
+	</script>
+	<!-- //MENU-JS -->
+
+	<!-- disable body scroll which navbar is in active -->
+	<script>
+		$(function() {
+			$('.navbar-toggler').click(function() {
+				$('body').toggleClass('noscroll');
+			})
+		});
+	</script>
+	<!-- //disable body scroll which navbar is in active -->
+
+	<!-- bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+	<!-- //bootstrap -->
+	<!-- //Js scripts -->
+
+</body>
+
+</html>
