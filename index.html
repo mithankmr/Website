@@ -9,8 +9,216 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
   <style>
+    .sliderproduct {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
 
+    .thumb-wrapper {
+      position: relative;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .thumb-wrapper a {
+      box-shadow: none;
+      text-decoration: none;
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+    }
+
+    .thumb-wrapper img {
+      height: auto;
+      max-height: 100%;
+    }
+
+    .sliderproduct .has-images .overlay-thumb {
+      position: absolute;
+      max-width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .sliderproduct-labels {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 2;
+    }
+
+    .loop-product-buttons-hover {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: -36px;
+      top: 10px;
+      opacity: 0;
+      -moz-transition: all ease 0.25s;
+      -webkit-transition: all ease 0.25s;
+      -o-transition: all ease 0.25s;
+      -ms-transition: all ease 0.25s;
+      transition: all ease 0.25s;
+      z-index: 2;
+    }
+
+    .add-to-cart-btn.sliderproduct-button {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loop-product-buttons-hover .sliderproduct-button {
+      width: 36px;
+      height: 36px;
+      border-radius: 40px;
+      margin-top: 10px;
+    }
+
+    .btn-small {
+      font-size: 14px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    .svg-icon {
+      max-width: 24px;
+      max-height: 24px;
+      cursor: pointer;
+      fill: #1b1b1b;
+    }
+
+    .loop-product-buttons-hover .sliderproduct-button .svg-icon {
+      max-width: 18px;
+    }
+
+    .loop-product-buttons-hover .sliderproduct-button {
+      width: 36px;
+      height: 36px;
+      border-radius: 40px;
+      margin-top: 10px;
+    }
+
+    .sliderproduct-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9f9f9;
+    }
+
+    .sliderproduct-button:hover,
+    .sliderproduct-button:hover svg {
+      color: #f9f9f9;
+      background: #1b1b1b;
+      fill: #f9f9f9;
+    }
+
+    .sliderproduct:not(.added-term):hover .has-images .overlay-thumb {
+      opacity: 1;
+      -moz-transition: all ease 0.55s;
+      -webkit-transition: all ease 0.55s;
+      -o-transition: all ease 0.55s;
+      -ms-transition: all ease 0.55s;
+      transition: all ease 0.55s;
+    }
+
+    .slider-label {
+      color: #f9f9f9;
+      background-color: red;
+      height: 20px;
+      padding: 0 7px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2px 0;
+    }
+
+    .sliderproduct:hover .loop-product-buttons-hover {
+      right: 15px;
+      opacity: 1;
+    }
+
+    .slider-hidden-cart .anarkali-price,
+    .slider-hidden-cart .sliderproduct-name,
+    .slider-hidden-cart .slider-cart-hidden {
+      -moz-transition: all ease 0.25s;
+      -webkit-transition: all ease 0.25s;
+      -o-transition: all ease 0.25s;
+      -ms-transition: all ease 0.25s;
+      transition: all ease 0.25s;
+    }
+
+    .slider-hidden-cart .btn-small,
+    .sliderproduct .sliderproduct-name {
+      font-size: 15px;
+    }
+
+    .slider-hidden-cart {
+      position: relative;
+      overflow: hidden;
+      min-height: 33px;
+    }
+
+    .slider-cart-hidden {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      -moz-transform: translateY(40px);
+      -webkit-transform: translateY(40px);
+      -o-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+      transform: translateY(40px);
+    }
+
+    .sliderproduct:not(.woo-catalog-mode-enabled):hover .slider-hidden-cart .anarkali-price,
+    .sliderproduct:not(.woo-catalog-mode-enabled):hover .slider-hidden-cart .sliderproduct-name {
+      -moz-transform: translateY(-40px);
+      -webkit-transform: translateY(-40px);
+      -o-transform: translateY(-40px);
+      -ms-transform: translateY(-40px);
+      transform: translateY(-40px);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .sliderproduct:not(.woo-catalog-mode-enabled):hover .slider-cart-hidden,
+    .sliderproduct:hover .slider-cart-hidden {
+      -moz-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -o-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
   </style>
 </head>
 
@@ -172,6 +380,48 @@
       </div>
     </div>
   </section>
+  	<!-- Ticker -->
+	<div class="ticker pt-5">
+		<div class="stock-ticker">
+			<ul>
+				<li class="minus"><span class="company">BTC</span> <span class="price">$67.150</span> <span
+						class="change">-0.39% (-0.75% 24h)</span></li>
+				<li class="plus"><span class="company">ETH</span> <span class="price">$2.631</span> <span
+						class="change">+0.29 (-2.68%)</span></li>
+				<li class="plus"><span class="company">USDT</span> <span class="price">$0.999</span> <span
+						class="change">+0.01 (+0.03%)</span></li>
+				<li class="plus"><span class="company">BNB</span> <span class="price">$592.05</span> <span
+						class="change">+0.42 (+2.54%)</span></li>
+				<li class="minus"><span class="company">SOL</span> <span class="price">$166.47</span> <span
+						class="change">-0.89 (-0.28%)</span></li>
+				<li class="plus"><span class="company">USDC</span> <span class="price">$487.05</span> <span
+						class="change">+5.31 (+1.10%)</span></li>
+				<li class="minus"><span class="company">XRP</span> <span class="price">$0.535</span> <span
+						class="change">-3.82 (-1.63%)</span></li>
+				<li class="minus"><span class="company">DOGE</span> <span class="price">$0.143</span> <span
+						class="change">-0.33 (-0.95%)</span></li>
+			</ul>
+			<ul aria-hidden="true">
+				<li class="minus"><span class="company">BTC</span> <span class="price">$67.150</span> <span
+						class="change">-0.39% (-0.75% 24h)</span></li>
+				<li class="plus"><span class="company">ETH</span> <span class="price">$2.631</span> <span
+						class="change">+0.29 (-2.68%)</span></li>
+				<li class="plus"><span class="company">USDT</span> <span class="price">$0.999</span> <span
+						class="change">+0.01 (+0.03%)</span></li>
+				<li class="plus"><span class="company">BNB</span> <span class="price">$592.05</span> <span
+						class="change">+0.42 (+2.54%)</span></li>
+				<li class="minus"><span class="company">SOL</span> <span class="price">$166.47</span> <span
+						class="change">-0.89 (-0.28%)</span></li>
+				<li class="plus"><span class="company">USDC</span> <span class="price">$487.05</span> <span
+						class="change">+5.31 (+1.10%)</span></li>
+				<li class="minus"><span class="company">XRP</span> <span class="price">$0.535</span> <span
+						class="change">-3.82 (-1.63%)</span></li>
+				<li class="minus"><span class="company">DOGE</span> <span class="price">$0.143</span> <span
+						class="change">-0.33 (-0.95%)</span></li>
+			</ul>
+		</div>
+	</div>
+	<!--  End Ticker -->
   <!-- The Band Section -->
   <section class="product-sec">
     <div class="w3-container">
@@ -236,28 +486,7 @@
     </div>
   </section>
   <!-- The Bestseller Section -->
-  <section class="bestseller" id="tour">
-    <!-- <div class="productSlides">
-      <img src="images/slideshow-img1.png" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Los Angeles</h3>
-        <p><b>We had the best time playing at Venice Beach!</b></p>
-      </div>
-    </div>
-    <div class="productSlides">
-      <img src="images/slideshow-img2.png" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>New York</h3>
-        <p><b>The atmosphere in New York is lorem ipsum.</b></p>
-      </div>
-    </div>
-    <div class="productSlides">
-      <img src="images/slideshow-img3.png" style="width:100%">
-      <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-        <h3>Chicago</h3>
-        <p><b>Thank you, Chicago - A night we won't forget.</b></p>
-      </div>
-    </div> -->
+  <section class="bestseller"> 
     <div class="w3-container">
       <div class="bestseller-banner">
         <div class="proTrends-wrapper banner-style-card-hover"><a class="banner-link" href="#"></a>
@@ -277,96 +506,1510 @@
       <div class="bestseller-filter">
         <div class="anarkali-tab-header">
           <h3 class="anarkali-tab-title">Bestseller Ethnic</h3>
-          <div class="anarkali-tab-menu attribute-links"><a class="loaded"
-              href="https://ninetheme.com/themes/anarkali/shop/?per_page=12" rel="nofollow" title="All Products"
+          <div class="anarkali-tab-menu attribute-links"><a class="loaded" href="#" rel="nofollow" title="All Products"
               data-tab="all">All Products</a>
             <div class="attr-wrapper"><span class="attr-title">size:</span>
-              <div class="terms-menu"><a
-                  href="https://ninetheme.com/themes/anarkali/shop/?filter_size=l&amp;per_page=12"
-                  rel="nofollow noreferrer" data-name="l" title="l">L</a><a
-                  href="https://ninetheme.com/themes/anarkali/shop/?filter_size=m&amp;per_page=12"
-                  rel="nofollow noreferrer" data-name="m" title="m">M</a><a
-                  href="https://ninetheme.com/themes/anarkali/shop/?filter_size=s&amp;per_page=12"
-                  rel="nofollow noreferrer" data-name="s" title="s">S</a><a
-                  href="https://ninetheme.com/themes/anarkali/shop/?filter_size=xl&amp;per_page=12"
-                  rel="nofollow noreferrer" data-name="xl" title="xl">XL</a></div>
+              <div class="terms-menu"><a href="#" rel="nofollow noreferrer" data-name="l" title="l">L</a><a href="#"
+                  rel="nofollow noreferrer" data-name="m" title="m">M</a><a href="#" rel="nofollow noreferrer"
+                  data-name="s" title="s">S</a><a href="#" rel="nofollow noreferrer" data-name="xl" title="xl">XL</a>
+              </div>
             </div>
             <div class="attr-wrapper"><span class="attr-title">color:</span>
-              <div class="terms-menu"><a
-                  href="https://ninetheme.com/themes/anarkali/shop/?filter_color=black&amp;per_page=12"
-                  rel="nofollow noreferrer" data-name="black" title="black"><span class="term-color"
-                    style="background-color:#000000;"></span></a><a
-                  href="https://ninetheme.com/themes/anarkali/shop/?filter_color=blue&amp;per_page=12"
+              <div class="terms-menu"><a href="#" rel="nofollow noreferrer" data-name="black" title="black"><span
+                    class="term-color" style="background-color:#000000;"></span></a><a href="#"
                   rel="nofollow noreferrer" data-name="blue" title="blue"><span class="term-color"
-                    style="background-color:#1e73be;"></span></a><a
-                  href="https://ninetheme.com/themes/anarkali/shop/?filter_color=green&amp;per_page=12"
-                  rel="nofollow noreferrer" data-name="green" title="green"><span class="term-color"
-                    style="background-color:#81d742;"></span></a><a
-                  href="https://ninetheme.com/themes/anarkali/shop/?filter_color=red&amp;per_page=12"
+                    style="background-color:#1e73be;"></span></a><a href="#" rel="nofollow noreferrer" data-name="green"
+                  title="green"><span class="term-color" style="background-color:#81d742;"></span></a><a href="#"
                   rel="nofollow noreferrer" data-name="red" title="red"><span class="term-color"
                     style="background-color:#dd3333;"></span></a></div>
             </div>
-          </div> 
+          </div>
           <a href="#" class="btn">All Products <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
         </div>
-      </div>
-  </section>
-
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32">
-        <span onclick="document.getElementById('ticketModal').style.display='none'"
-          class="w3-button w3-teal w3-xlarge w3-display-topright">&times;</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i
-            class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section"
-          onclick="document.getElementById('ticketModal').style.display='none'">Close <i
-            class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+        <div id="owl-carousel" class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- End Page Content -->
-
-  <!-- Image of location/map -->
-  <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-
+  </section> 
+  <!-- The Featured Section -->
+  <section class="featuredseller"> 
+    <div class="w3-container"> 
+        <div class="anarkali-tab-header">
+          <h3 class="anarkali-tab-title">Featured Products</h3>
+          <!-- <div class="anarkali-tab-menu attribute-links"><a class="loaded" href="#" rel="nofollow" title="All Products"
+              data-tab="all">All Products</a>
+            <div class="attr-wrapper"><span class="attr-title">size:</span>
+              <div class="terms-menu"><a href="#" rel="nofollow noreferrer" data-name="l" title="l">L</a><a href="#"
+                  rel="nofollow noreferrer" data-name="m" title="m">M</a><a href="#" rel="nofollow noreferrer"
+                  data-name="s" title="s">S</a><a href="#" rel="nofollow noreferrer" data-name="xl" title="xl">XL</a>
+              </div>
+            </div>
+            <div class="attr-wrapper"><span class="attr-title">color:</span>
+              <div class="terms-menu"><a href="#" rel="nofollow noreferrer" data-name="black" title="black"><span
+                    class="term-color" style="background-color:#000000;"></span></a><a href="#"
+                  rel="nofollow noreferrer" data-name="blue" title="blue"><span class="term-color"
+                    style="background-color:#1e73be;"></span></a><a href="#" rel="nofollow noreferrer" data-name="green"
+                  title="green"><span class="term-color" style="background-color:#81d742;"></span></a><a href="#"
+                  rel="nofollow noreferrer" data-name="red" title="red"><span class="term-color"
+                    style="background-color:#dd3333;"></span></a></div>
+            </div>
+          </div> -->
+          <a href="#" class="btn">All Products <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div id="owl-carousel2" class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+        </div> 
+  </section> 
+   <!-- The Month Section -->
+   <section class="monthseller"> 
+    <div class="w3-container"> 
+        <div class="anarkali-tab-header text-center">
+          <h3 class="anarkali-tab-title">This Month’s Best Sellers</h3> 
+        </div>
+        <div id="owl-carousel3" class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-27-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <!-- <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div> -->
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="sliderproduct">
+              <div class="thumb-wrapper"> <a href="#" class="product-link has-images">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product1-30-450x600.jpg"
+                    alt="">
+                  <img width="450" height="600"
+                    src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-29-450x600.jpg"
+                    class="overlay-thumb" alt=""> </a>
+                <div class="sliderproduct-labels"><span class="slider-label badge-def"
+                    data-label-color="">Sale!</span><span class="slider-label">17%</span></div>
+                <div class="loop-product-buttons-hover">
+                  <!-- <div class="add-to-cart-btn sliderproduct-button"><a href="#"
+                    class="btn-small" rel="nofollow"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                  </div> -->
+                  <div class="anarkali-quickview-btn sliderproduct-button" data-id="13243" data-label="Quick View"><i
+                      class="fa fa-eye" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="compare-btn sliderproduct-button"><i class="fa fa-exchange" aria-hidden="true">
+                      <use href="#"></use>
+                    </i></div>
+                  <div class="wishlist-btn sliderproduct-button"><i class="fa fa-heart-o" aria-hidden="true">
+                      <use href="#"></use>
+                    </i> </div>
+                </div>
+              </div>
+              <div class="slider-hidden-cart">
+                <h6 class="sliderproduct-name"><a href="#">Amzira</a></h6>
+                <div class="slider-cart-hidden"><a href="#" class="btn-small" rel="nofollow">Add to cart</a></div>
+              </div>
+              <div class="price-rating">
+                <span class="woocommerce-Price-amount amount"><bdi><span
+                      class="currencySymbol">$</span>24.99</bdi></span>
+              </div>
+            </div>
+          </div>
+        </div> 
+  </section> 
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -412,29 +2055,44 @@
         modal.style.display = "none";
       }
     }
-  </script>
-  <script>
-    var myIndex = 0;
-    carousel();
+  </script> 
 
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("productSlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      // Show first two slides
-      myIndex++;
-      if (myIndex > x.length) {
-        myIndex = 1
-      }
-      x[myIndex - 1].style.display = "block";
-      if (myIndex < x.length) {
-        x[myIndex].style.display = "block"; // Show the next slide
-      }
-      setTimeout(carousel, 2000); // Change images every 2 seconds
-    }
+  <script>
+    jQuery(document).ready(function($) {
+      var owl = $("#owl-carousel");
+      owl.owlCarousel({
+        loop: true,
+        margin: 30,
+        dots: true,
+        nav: true,
+        items: 5,
+      })
+    });
   </script>
+    <script>
+      jQuery(document).ready(function($) {
+        var owl = $("#owl-carousel2");
+        owl.owlCarousel({
+          loop: true,
+          margin: 30,
+          dots: true,
+          nav: true,
+          items: 5,
+        })
+      });
+    </script>
+        <script>
+          jQuery(document).ready(function($) {
+            var owl = $("#owl-carousel3");
+            owl.owlCarousel({
+              loop: true,
+              margin: 30,
+              dots: true,
+              nav: true,
+              items: 5,
+            })
+          });
+        </script>
 </body>
 
 </html>

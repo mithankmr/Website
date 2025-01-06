@@ -183,6 +183,60 @@ p {
     }
   }
 }
+
+.anarkali-tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+  position: relative;
+  .anarkali-tab-title {
+    font-size: var(--wc-fs-heading5);
+    line-height: normal; 
+  } 
+  .anarkali-tab-menu {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+   a {
+      box-shadow: none;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+          gap: 10px;
+          line-height: 1;
+          color:var(--product-description-color);
+  }
+  .attr-wrapper {
+    padding: 10px 15px; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1;
+    .terms-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+      .term-color {
+        width: 12px;
+        height: 12px;
+        border: 1px solid var(--product-description-color);
+        border-radius: 10px;
+    }
+  }
+}
+} 
+.btn {
+  background: transparent;
+  color: var(--product-description-color);
+  padding: 0;
+}
+}
 .header-wraper {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   background-color: var(--header-background-color);
@@ -354,56 +408,7 @@ p {
     .bestseller-filter {
       flex: 0 0 75%;
       max-width: 75%;
-    }
-    .anarkali-tab-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: nowrap;
-      position: relative;
-      .anarkali-tab-title {
-        font-size: 25px;
-        line-height: 1.3; 
-      }
-      
-      .anarkali-tab-menu {
-        display: flex;
-        align-items: center;
-        gap: 3px;
-        font-size: 11px;
-        font-weight: 500;
-        text-transform: uppercase;
-       a {
-          box-shadow: none;
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-              gap: 10px;
-              line-height: 1;
-              color:var(--product-description-color);
-      }
-      .attr-wrapper {
-        padding: 10px 15px; 
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        line-height: 1;
-        .terms-menu {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          gap: 5px;
-          .term-color {
-            width: 12px;
-            height: 12px;
-            border: 1px solid var(--product-description-color);
-            border-radius: 10px;
-        }
-      }
-    }
     } 
-  }
   }
 } 
 .product-sec {
@@ -453,16 +458,77 @@ p {
       .probox {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         .widget-cont {
           flex: 0 0 calc(33.333% - 2%);
           max-width: calc(33.333% - 2%);
           margin: 0 1%;
           transition: background 0.3s, border 0.3s, border-radius 0.3s,
-            box-shadow 0.3s, transform ease 0.4s;
+          box-shadow 0.3s, transform ease 0.4s;
           height: 100%;
+          &:last-child {
+            margin-right: 0;
+        }
         } 
       }
     }
+  }
+}
+.stock-ticker {
+  --gap: 20px;
+  border-block: 1px solid;
+  display: flex;
+  font-size: 15px;
+  gap: var(--gap);
+  overflow: hidden;
+  padding-block: 8px;
+  user-select: none;
+  ul {
+    align-items: center;
+    animation: scroll 20s linear infinite;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--gap);
+    justify-content: space-between;
+    list-style: none;
+    min-width: 100%;
+  }
+ &:hover {
+   ul {
+    animation-play-state: paused;
+  }
+} 
+ .company,
+ .price {
+  font-weight: bold;
+}
+.price {
+  margin-inline: 4px; 
+}
+.plus {
+  margin-inline: 4px;
+  &::before {
+    content: "↑";
+    color: #089981;
+  }
+  &.change {
+    color: #089981;
+  }
+}
+.minus{
+  &::before {
+  content: "↓";
+  color: #f23645;
+  &.change {
+    color: #f23645;
+  }
+}
+} 
+}    
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
   }
 }
 .productSlides {
