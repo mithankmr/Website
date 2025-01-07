@@ -6,6 +6,8 @@
   --product-description-font-size: 16px;
   --product-description-color: rgba(0, 18, 25, 1);
   --product-description-line-height: 1.6;
+  --primary-color: rgba(27, 72, 101, 1);
+  --secondary-color: #ffdc00;
   --banner-height: 700px;
   --icon-dark: #000;
   --font-family: "Lato", sans-serif;
@@ -224,19 +226,19 @@ p {
   flex-wrap: wrap;
   align-items: center;
 }
-.header-wraper .w3-container .nav {
+.header-wraper .w3-container nav {
   flex: 0 0 40%;
   max-width: 40%;
 }
 @media (max-width: 575.98px) {
-  .header-wraper .w3-container .nav {
+  .header-wraper .w3-container nav {
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
-.header-wraper .w3-container .nav .w3-bar-item,
-.header-wraper .w3-container .nav .w3-dropdown-click button,
-.header-wraper .w3-container .nav .w3-dropdown-hover button {
+.header-wraper .w3-container nav .w3-bar-item,
+.header-wraper .w3-container nav .w3-dropdown-click button,
+.header-wraper .w3-container nav .w3-dropdown-hover button {
   font-weight: bold;
   text-shadow: none;
   text-decoration: none;
