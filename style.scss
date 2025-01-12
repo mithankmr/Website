@@ -1314,15 +1314,17 @@ p {
   position: relative;
   background: var(--footer-background-color);
   border-top: 1px solid var(--product-description-color);
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
   .w3-container {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
     .footer-section1 {
       display: flex;
       flex: 0 0 70%;
       max-width: 70%;
       gap: 20px;
+      padding-left: 12px;
       @media (max-width: 767.98px) {
         flex: 0 0 100%;
         max-width: 100%;
@@ -1398,6 +1400,7 @@ p {
     .footer-section2 {
       flex: 0 0 30%;
       max-width: 30%;
+      padding-right: 12px;
       @media (max-width: 767.98px) {
         flex: 0 0 100%;
         max-width: 100%;
@@ -1439,9 +1442,15 @@ p {
         }
       }
     }
-    .copyRight {
+   .copyRight {
       flex: 0 0 100%;
       max-width: 100%;
+      background-color: var(--arrow-backgound-color);
+      padding: 16px;
+      color: var(--arrow-icon-color);
+      text-align: center;
+      line-height: normal;
+      margin-top: 2rem;
   }
   }
 }
