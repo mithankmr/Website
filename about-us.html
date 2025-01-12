@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+</head>
+
+<body>
+    <!-- Top Navbar -->
+    <div class="topBar">
+        <div class="w3-container">
+            <div class="contactUs">
+                <ul>
+                    <li><a href="tel:+111111111"><i class="fa fa-phone" aria-hidden="true"></i> 11111111</a></li>
+                    <li><a href="mailto:support@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>
+                            support@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="socialMedia">
+                <ul>
+                    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <header class="header-wraper">
+        <div class="w3-container">
+            <nav>
+                <div class="navbar">
+                    <i class='bx bx-menu fa fa-bars'></i>
+                    <div class="nav-links">
+                        <div class="sidebar-logo">
+                            <span class="logo-name">Logo</span>
+                            <i class='bx bx-x fa fa-times'></i>
+                        </div>
+                        <ul class="links">
+                            <li><a href="#">Home</a></li>
+                            <li>
+                                <a href="#">About Us</a>
+                                <i class='bx bxs-chevron-down htmlcss-arrow arrow fa fa-chevron-down'></i>
+                                <ul class="htmlCss-sub-menu sub-menu">
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">Login Forms</a></li>
+                                    <li><a href="#">Card Design</a></li>
+                                    <!-- <li class="more">
+                  <span><a href="#">More</a>
+                    <i class='bx bxs-chevron-right arrow more-arrow fa fa-chevron-down'></i>
+                  </span>
+                  <ul class="more-sub-menu sub-menu">
+                    <li><a href="#">Neumorphism</a></li>
+                    <li><a href="#">Pre-loader</a></li>
+                    <li><a href="#">Glassmorphism</a></li>
+                  </ul>
+                </li> -->
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Products</a>
+                                <i class='bx bxs-chevron-down js-arrow arrow fa fa-chevron-down'></i>
+                                <ul class="js-sub-menu sub-menu">
+                                    <li><a href="#">Dynamic Clock</a></li>
+                                    <li><a href="#">Form Validation</a></li>
+                                    <li><a href="#">Card Slider</a></li>
+                                    <li><a href="#">Complete Website</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="nav-Logo">
+                <img src="images/logo.png" width="100%" height="100%" alt="Dtoub">
+            </div>
+            <div class="header-default-inner">
+                <div class="top-action-btn active" data-name="search-popup"><svg class="svgSearch dt-svg-icon"
+                        width="512" height="512" fill="currentColor" viewBox="0 0 48 48"
+                        enable-background="new 0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="m40.2850342 37.4604492-6.4862061-6.4862061c1.9657593-2.5733643 3.0438843-5.6947021 3.0443115-8.9884033 0-3.9692383-1.5458984-7.7011719-4.3530273-10.5078125-2.8066406-2.8066406-6.5380859-4.3525391-10.5078125-4.3525391-3.9692383 0-7.7011719 1.5458984-10.5078125 4.3525391-5.7939453 5.7944336-5.7939453 15.222168 0 21.015625 2.8066406 2.8071289 6.5385742 4.3530273 10.5078125 4.3530273 3.2937012-.0004272 6.4150391-1.0785522 8.9884033-3.0443115l6.4862061 6.4862061c.3901367.390625.9023438.5859375 1.4140625.5859375s1.0239258-.1953125 1.4140625-.5859375c.78125-.7807617.78125-2.0473633 0-2.828125zm-25.9824219-7.7949219c-4.234375-4.234375-4.2338867-11.1245117 0-15.359375 2.0512695-2.0507813 4.7788086-3.1806641 7.6796875-3.1806641 2.9013672 0 5.628418 1.1298828 7.6796875 3.1806641 2.0512695 2.0512695 3.1811523 4.7788086 3.1811523 7.6796875 0 2.9013672-1.1298828 5.628418-3.1811523 7.6796875s-4.7783203 3.1811523-7.6796875 3.1811523c-2.9008789.0000001-5.628418-1.1298827-7.6796875-3.1811523z">
+                            </path>
+                        </g>
+                    </svg></div>
+                <div class="header-top-buttons">
+                    <div class="top-action-btn" data-name="cart"><span class="cart-count wc-count">0</span><svg
+                            class="shopBag dt-svg-icon" width="512" height="512" fill="currentColor" viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m26 8.9a1 1 0 0 0 -1-.9h-3a6 6 0 0 0 -12 0h-3a1 1 0 0 0 -1 .9l-1.78 17.8a3 3 0 0 0 .78 2.3 3 3 0 0 0 2.22 1h17.57a3 3 0 0 0 2.21-1 3 3 0 0 0 .77-2.31zm-10-4.9a4 4 0 0 1 4 4h-8a4 4 0 0 1 4-4zm9.53 23.67a1 1 0 0 1 -.74.33h-17.58a1 1 0 0 1 -.74-.33 1 1 0 0 1 -.26-.77l1.7-16.9h2.09v3a1 1 0 0 0 2 0v-3h8v3a1 1 0 0 0 2 0v-3h2.09l1.7 16.9a1 1 0 0 1 -.26.77z">
+                            </path>
+                        </svg></div>
+                    <div class="top-action-btn" data-name="wishlist"><span class="wishlist-count wc-count">5</span><svg
+                            class="svgLove dt-svg-icon" width="512" height="512" fill="currentColor" viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m29.55 6.509c-1.73-2.302-3.759-3.483-6.031-3.509h-.076c-3.29 0-6.124 2.469-7.443 3.84-1.32-1.371-4.153-3.84-7.444-3.84h-.075c-2.273.026-4.3 1.207-6.059 3.549a8.265 8.265 0 0 0 1.057 10.522l11.821 11.641a1 1 0 0 0 1.4 0l11.82-11.641a8.278 8.278 0 0 0 1.03-10.562zm-2.432 9.137-11.118 10.954-11.118-10.954a6.254 6.254 0 0 1 -.832-7.936c1.335-1.777 2.831-2.689 4.45-2.71h.058c3.48 0 6.627 3.924 6.658 3.964a1.037 1.037 0 0 0 1.57 0c.032-.04 3.2-4.052 6.716-3.964a5.723 5.723 0 0 1 4.421 2.67 6.265 6.265 0 0 1 -.805 7.976z">
+                            </path>
+                        </svg></div>
+                    <div class="top-action-btn" data-name="compare"><span class="compare-count wc-count">0</span><svg
+                            class="svgCompare dt-svg-icon" width="512" height="512" fill="currentColor"
+                            viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m26 9a1 1 0 0 0 0-2h-4a1 1 0 0 0 -1 1v4a1 1 0 0 0 2 0v-1.66a9 9 0 0 1 -7 14.66c-.3 0-.6 0-.9 0a1 1 0 1 0 -.2 2c.36 0 .73.05 1.1.05a11 11 0 0 0 8.48-18.05z">
+                            </path>
+                            <path
+                                d="m10 19a1 1 0 0 0 -1 1v1.66a9 9 0 0 1 8.8-14.48 1 1 0 0 0 .4-2 10.8 10.8 0 0 0 -2.2-.18 11 11 0 0 0 -8.48 18h-1.52a1 1 0 0 0 0 2h4a1 1 0 0 0 1-1v-4a1 1 0 0 0 -1-1z">
+                            </path>
+                        </svg></div>
+                    <div class="top-action-btn header-top-account" data-account-action="account"><a
+                            class="account-page-link" href="#0"><svg class="svgUser2 dt-svg-icon"
+                                enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="m256 253.7c-62 0-112.4-50.4-112.4-112.4s50.4-112.4 112.4-112.4 112.4 50.4 112.4 112.4-50.4 112.4-112.4 112.4zm0-195.8c-46 0-83.4 37.4-83.4 83.4s37.4 83.4 83.4 83.4 83.4-37.4 83.4-83.4-37.4-83.4-83.4-83.4z">
+                                        </path>
+                                    </g>
+                                    <g>
+                                        <path
+                                            d="m452.1 483.2h-392.2c-8 0-14.5-6.5-14.5-14.5 0-106.9 94.5-193.9 210.6-193.9s210.6 87 210.6 193.9c0 8-6.5 14.5-14.5 14.5zm-377-29.1h361.7c-8.1-84.1-86.1-150.3-180.8-150.3s-172.7 66.2-180.9 150.3z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a></div>
+                    <div class="top-action-btn open-notices-popup no-panel"><svg class="svgNotification dt-svg-icon"
+                            height="512" viewBox="0 0 512 512" width="512">
+                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                <path
+                                    d="m328.084 422.916c-5.04 37.808-37.451 66.165-75.592 66.165s-70.552-28.355-75.601-66.161l-2.432-18.208h156.052z"
+                                    fill="#e4404d"></path>
+                                <path
+                                    d="m241.242 488.243c-33.1-4.935-59.807-31.3-64.351-65.324l-2.432-18.208h133.552l-2.427 18.204c-4.536 34.027-31.243 60.393-64.342 65.328z"
+                                    fill="#fd4755"></path>
+                                <path
+                                    d="m85.729 189.68c0-91.962 74.801-166.76 166.763-166.76 91.963 0 166.753 74.798 166.753 166.76v180.95h-333.516z"
+                                    fill="#e6bd5c"></path>
+                                <path
+                                    d="m85.729 189.68c0-49.496 21.676-94.011 56.026-124.577 24.848-14.719 53.819-23.183 84.736-23.183 91.963 0 166.753 74.798 166.753 166.76v161.95h-307.515z"
+                                    fill="#ffd266"></path>
+                                <path
+                                    d="m420.819 354.471c18.314 0 33.199 14.885 33.199 33.2 0 18.314-14.886 33.199-33.199 33.199h-336.655c-18.313 0-33.199-14.886-33.199-33.199 0-18.314 14.884-33.2 33.199-33.2z"
+                                    fill="#e6bd5c"></path>
+                                <path
+                                    d="m430.211 419.516c-2.979.88-6.13 1.354-9.392 1.354h-336.655c-18.313 0-33.199-14.886-33.199-33.199 0-5.941 1.568-11.52 4.309-16.348 2.978-.879 6.129-1.352 9.39-1.352h336.655c18.314 0 33.199 14.885 33.199 33.2.001 5.939-1.566 11.518-4.307 16.345z"
+                                    fill="#ffd266"></path>
+                                <path
+                                    d="m230.068 138.4c0-63.686 51.793-115.48 115.479-115.48 63.687 0 115.488 51.791 115.488 115.48 0 63.693-51.794 115.491-115.488 115.491-63.693-.001-115.479-51.801-115.479-115.491z"
+                                    fill="#d7d7d7"></path>
+                                <path
+                                    d="m230.068 138.4c0-63.184 50.983-114.654 113.979-115.461 62.997.807 113.988 52.273 113.988 115.461 0 63.192-50.984 114.665-113.988 115.471-63.003-.807-113.979-52.283-113.979-115.471z"
+                                    fill="#efefef"></path>
+                                <path
+                                    d="m245.187 138.4c0-55.341 45.018-100.36 100.359-100.36 55.342 0 100.369 45.017 100.369 100.36 0 55.348-45.02 100.371-100.369 100.371-55.347 0-100.359-45.026-100.359-100.371z"
+                                    fill="#e4404d"></path>
+                                <path
+                                    d="m348.797 38.098c53.843 1.722 97.118 46.047 97.118 100.302 0 54.26-43.269 98.591-97.118 100.313-53.848-1.722-97.11-46.056-97.11-100.313 0-54.253 43.268-98.58 97.11-100.302z"
+                                    fill="#fd4755"></path>
+                                <path
+                                    d="m345.546 157.521c4.419 0 8-3.581 8-8.002v-62.35c0-4.419-3.581-8-8-8-4.41 0-8 3.581-8 8v62.35c.001 4.421 3.59 8.002 8 8.002zm8 27.41c0-4.421-3.581-8.002-8-8.002-4.41 0-8 3.58-8 8.002v4.709c0 4.41 3.59 8 8 8 4.419 0 8-3.59 8-8z"
+                                    fill="#d7d7d7"></path>
+                                <path
+                                    d="m345.546 157.521c.617 0 1.218-.07 1.795-.202 1.447-1.448 2.343-3.448 2.343-5.658v-62.35c0-4.419-3.581-8-8-8-.616 0-1.216.07-1.793.202-1.448 1.448-2.345 3.447-2.345 5.655v62.35c.001 4.422 3.59 8.003 8 8.003zm4.138 29.552c0-4.421-3.581-8.002-8-8.002-.616 0-1.216.07-1.792.202h-.001c-1.448 1.448-2.345 3.447-2.345 5.657v4.709c0 4.41 3.59 8 8 8 .616 0 1.216-.07 1.791-.202 1.449-1.449 2.346-3.449 2.346-5.656v-4.708z"
+                                    fill="#efefef"></path>
+                            </g>
+                        </svg>
+                        <div class="notices mini-panel">
+                            <div class="inner"><a href="#">Shocking Campaign! 5% discount on
+                                    the phones, last 20 stocks!</a>
+                                <a href="#">Shocking Campaign! 5% discount on the Macbook Pro,
+                                    last 12 stocks!</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-toggle"><svg class="svgBars dt-svg-icon" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="0" y1="12" x2="21" y2="12"></line>
+                        <line x1="0" y1="6" x2="21" y2="6"></line>
+                        <line x1="0" y1="18" x2="21" y2="18"></line>
+                    </svg><span class="menu-title">Menu</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="aboutBanner"
+        style="background-image: url('https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/11/slideshow-1920-31.png');">
+        <h1 class="about-heading">We believe we can all make a difference.</h1>
+        <p>Aesthetic brunch polaroid bespoke, vice kale chips leggings 90’s selfies raw denim.</p>
+    </section>
+    <!--About Start Section -->
+    <section class="aboutStart">
+        <div class="w3-container">
+            <div class="aboutImg">
+                <img src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/11/6-768x768.png" width="100"
+                    height="100%" alt="About US">
+            </div>
+            <div class="abouttext">
+                <h2 class="tag-line">Start from since 1928</h2>
+                <h3 class="about-heading">Modern and eye-catching lines</h3>
+                <p>Inspired by the rebellious spirit of America and the intrigue of unwavering authenticity, R13
+                    launched
+                    in Fall 2009. At the forefront of design, R13 cuts avant-garde silhouettes such as the skinny
+                    legging
+                    and harem pant from Italian and Turkish denim produced in Castelfranco, Italy. Pure indigo casting,
+                    quality stretch and machine hand mending give the jeans their superior shape</p>
+                <div class="aboutTarget">
+                    <div class="hapCustomers">
+                        <h4 class="procount">200K+</h4>
+                        <p class="prodetail">Happy Customers</p>
+                    </div>
+                    <div class="proSales">
+                        <h4 class="procount">1.2M+</h4>
+                        <p class="prodetail">Product Sales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About Shırts Section -->
+    <section class="aboutshırts">
+        <div class="w3-container">
+            <div class="abouttext">
+                <h2 class="tag-line">shırts</h2>
+                <h3 class="about-heading">Exciting and innovative</h3>
+                <p>Inspired by the rebellious spirit of America and the intrigue of unwavering authenticity, R13
+                    launched in Fall 2009. At the forefront of design, R13 cuts avant-garde silhouettes such as the
+                    skinny legging and harem pant from Italian and Turkish denim produced in Castelfranco, Italy. Pure
+                    indigo casting, quality stretch and machine hand mending give the jeans their superior shape and an
+                    authentic...</p>
+
+                <p>Inspired by the rebellious spirit of America and the intrigue of unwavering authenticity, R13
+                    launched in Fall 2009. At the forefront of design, R13 cuts avant-garde silhouettes such as the
+                    skinny legging and harem pant from Italian and Turkish denim produced in Castelfranco, Italy. Pure
+                    indigo casting, quality stretch and machine hand mending give the jeans their superior shape...</p>
+            </div>
+            <div class="aboutImg">
+                <img src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/11/3-768x768.png" width="100"
+                    height="100%" alt="About US">
+            </div>
+        </div>
+    </section>
+    <!--About price policy Section -->
+    <section class="aboutpolicy">
+        <div class="w3-container">
+            <h2 class="tag-line">price policy</h2>
+            <h3 class="about-heading">Popular understanding, fashion for everyone!</h3>
+            <p>Inspired by the rebellious spirit of America and the intrigue of unwavering authenticity, R13
+                launched in Fall 2009. At the forefront of design, R13 cuts avant-garde silhouettes such as the
+                skinny legging and harem pant from Italian and Turkish denim produced in Castelfranco, Italy. Pure
+                indigo casting, quality stretch and machine hand mending give the jeans their superior shape and an
+                authentic...</p>
+        </div>
+    </section>
+     <!--About video Section -->
+    <section class="aboutVideo"> 
+        <video controls autoplay loop muted playsinline width="1280" height="720" role="img">
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+        </video>
+    </section>
+  <!--About  creative team Section -->
+  <section class="aboutteam">
+    <div class="w3-container">
+        <div class="teamDetails">
+           <h4 class="team-heading">creative team</h3>
+            <p>Cardigan helvetica sriracha, portland celiac truffaut woke</p>
+        </div>
+        <div class="teamBox">
+            <img src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-19.jpg" width="100"
+            height="100%" alt="About US">
+            <h4 class="member-name">Elisa Doe <span>designer</span></h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a>
+            </ul>
+        </div>
+        <div class="teamBox">
+            <img src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-19.jpg" width="100"
+            height="100%" alt="About US">
+            <h4 class="member-name">Elisa Doe <span>designer</span></h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a>
+            </ul>
+        </div>
+        <div class="teamBox">
+            <img src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-19.jpg" width="100"
+            height="100%" alt="About US">
+            <h4 class="member-name">Elisa Doe <span>designer</span></h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a>
+            </ul>
+        </div>
+        <div class="teamBox">
+            <img src="https://ninetheme.com/themes/anarkali/wp-content/uploads/2023/09/product2-19.jpg" width="100"
+            height="100%" alt="About US">
+            <h4 class="member-name">Elisa Doe <span>designer</span></h4>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a>
+            </ul>
+        </div>
+    </div>
+</section>
+  <!-- features -->
+  <section class="features">
+    <div class="w3-container">
+      <div class="feature">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50">
+          <rect x="1" y="4" width="15" height="10" fill="none" stroke="black" stroke-width="1"></rect>
+          <rect x="16" y="7" width="6" height="7" fill="none" stroke="black" stroke-width="1"></rect>
+          <circle cx="6" cy="18" r="2" fill="none" stroke="black" stroke-width="1"></circle>
+          <circle cx="18" cy="18" r="2" fill="none" stroke="black" stroke-width="1"></circle>
+          <line x1="6" y1="14" x2="6" y2="18" stroke="black" stroke-width="1"></line>
+        </svg>
+        <div class="text-content">
+          <h5>Free shipping</h5>
+          <p>Standard Shipping</p>
+        </div>
+      </div>
+      <div class="feature">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50">
+          <rect x="6" y="10" width="12" height="10" fill="none" stroke="black" stroke-width="1"></rect>
+          <path d="M9 10V7a3 3 0 0 1 6 0v3" fill="none" stroke="black" stroke-width="1"></path>
+          <circle cx="12" cy="15" r="1" fill="none" stroke="black" stroke-width="1"></circle>
+        </svg>
+        <div class="text-content">
+          <h5>Secure Payment</h5>
+          <p>100% risk-free shopping</p>
+        </div>
+      </div>
+      <div class="feature">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50">
+          <rect x="2" y="8" width="20" height="12" fill="none" stroke="black" stroke-width="1"></rect>
+          <line x1="12" y1="8" x2="12" y2="20" stroke="black" stroke-width="1"></line>
+          <line x1="2" y1="10" x2="22" y2="10" stroke="black" stroke-width="1"></line>
+          <circle cx="8" cy="5" r="2" fill="none" stroke="black" stroke-width="1"></circle>
+          <circle cx="16" cy="5" r="2" fill="none" stroke="black" stroke-width="1"></circle>
+        </svg>
+        <div class="text-content">
+          <h5>Special Campaigns</h5>
+          <p>Guaranteed Saving</p>
+        </div>
+      </div>
+      <div class="feature">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50">
+          <circle cx="12" cy="8" r="3" fill="none" stroke="black" stroke-width="1"></circle>
+          <path d="M6 18a6 6 0 0 1 12 0" fill="none" stroke="black" stroke-width="1"></path>
+        </svg>
+        <div class="text-content">
+          <h5>Customer Service</h5>
+          <p>Give us feedback</p>
+        </div>
+      </div>
+    </div> 
+  </section>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="w3-container">
+            <div class="footer-section1">
+                <div class="footer-section about">
+                    <h5>ABOUT STYLER</h5>
+                    <p>Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>
+                    <div class="social-icons">
+                        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                        <i class="fa fa-twitter w3-hover-opacity"></i>
+                        <i class="fa fa-youtube w3-hover-opacity"></i>
+                    </div>
+                </div>
+                <div class="footer-section categories">
+                    <h5>CATEGORIES</h5>
+                    <ul>
+                        <li>Woman Denim</li>
+                        <li>Accessories</li>
+                        <li>Man Denim</li>
+                        <li>Clothes</li>
+                        <li>Shoes</li>
+                    </ul>
+                </div>
+                <div class="footer-section campaigns">
+                    <h5>CAMPAIGNS</h5>
+                    <ul>
+                        <li>Winter Shoes</li>
+                        <li>Women T-shirts</li>
+                        <li>%50 Sales</li>
+                        <li>Outlet</li>
+                        <li>Pre-Sale</li>
+                    </ul>
+                </div>
+                <div class="footer-section help">
+                    <h5>HELP</h5>
+                    <ul>
+                        <li>Order Tracking</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                        <li>Tutorials</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section2">
+                <div class="footer-section newsletter">
+                    <h6>NEWSLETTER</h6>
+                    <form action="#">
+                        <input type="email" placeholder="Your E-mail" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <p>Sign up to get the latest on new Products, Promotions, Design news and more</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // search-box open close js code
+        let navbar = document.querySelector(".navbar");
+        let searchBox = document.querySelector(".search-box .bx-search");
+        // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+        // sidebar open close js code
+        let navLinks = document.querySelector(".nav-links");
+        let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+        let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+        menuOpenBtn.onclick = function() {
+            navLinks.style.left = "0";
+        }
+        menuCloseBtn.onclick = function() {
+            navLinks.style.left = "-100%";
+        }
+        // sidebar submenu open close js code
+        let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+        htmlcssArrow.onclick = function() {
+            navLinks.classList.toggle("show1");
+        }
+        let moreArrow = document.querySelector(".more-arrow");
+        moreArrow.onclick = function() {
+            navLinks.classList.toggle("show2");
+        }
+        let jsArrow = document.querySelector(".js-arrow");
+        jsArrow.onclick = function() {
+            navLinks.classList.toggle("show3");
+        }
+    </script>
+</body>
+
+</html>
