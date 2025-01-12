@@ -1299,6 +1299,7 @@ p {
 }
 .footer .w3-container {
   display: flex;
+  flex-wrap: wrap;
 }
 .footer .w3-container .footer-section1 {
   display: flex;
@@ -1421,4 +1422,8 @@ p {
 }
 .footer .w3-container .footer-section2 .footer-section form button:hover {
   background: #333;
+}
+.footer .w3-container .copyRight {
+  flex: 0 0 100%;
+  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
